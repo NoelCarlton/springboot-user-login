@@ -1,0 +1,10 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD com.example.Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd ">
+<mapper namespace="com.noel.handbook.accesscontroll.dao.IUser">
+	<select id="getUser" resultType="com.noel.handbook.accesscontroll.model.UserModel">
+		SELECT * FROM user 
+		<where>
+			name like CONCAT('%','${name}','%')
+		</where>
+	</select>
+</mapper> 
